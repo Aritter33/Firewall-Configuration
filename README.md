@@ -1,30 +1,42 @@
-# Firewall-Configuration 
+ ## Network Intrusion Detection with Snort
 
 ## Objective
 
+The aim of this project is to download, install, and configure Snort to monitor and analyze network traffic in real-time, using pre-defined and custom rules to detect intrusions. This also includes launching a SYN flood attack simulation using Kali Linux to demonstrate Snort’s effectiveness in identifying and logging potential threats.
 
-To build and configure a firewall on an Ubuntu system using UFW (Uncomplicated Firewall), securing the network from unauthorized access and potential threats.
+### Skills Learned/ Tools Used
 
-### Skills Learned/Tools Used
+- Snort installation, configuration, and rule management
+- Network traffic analysis through real-time monitoring and logging
+- Creation and customization of Snort rules for specific threats
+- Detection of TCP-based SYN flood attacks
+- Use of Kali Linux for launching network attacks
+- Intrusion detection and packet inspection at multiple layers (Ethernet, IP, TCP)
+- Advanced tools like unified logging and alert management
+- Network security troubleshooting and identification of malicious activities
+- Understanding of Snort's rule syntax and optimization for better performance
 
-
-- Basic Linux commands
-- Ubuntu system (physical or virtual)
-- UFW (Uncomplicated Firewall)
-- Managing firewall rules (allowing/denying services and ports)
-- Network security principles
-- SSH and network protocol handling
 
 
 ## Steps
-## Update system:
-Ensure the system is up to date ![Screenshot 2024-09-18 202616](https://github.com/user-attachments/assets/8f9ea334-db7e-4a97-9674-50066af6e1c6)
-## Install UFW:
-Install the firewall if not already present.![Screenshot 2024-09-18 202806](https://github.com/user-attachments/assets/7a9b1fc5-9d0e-4aec-a0dd-271c61c52bd9)
-## Configure UFW:
-Allow SSH connections, Allow specific services/ports ![Screenshot 2024-09-18 202935](https://github.com/user-attachments/assets/6dec2876-25d3-4dd3-b02a-0bd14eeebed9)
-## Manage UFW:
-Deny specific services/ports, View and manage UFW rules ![Screenshot 2024-09-18 203055](https://github.com/user-attachments/assets/e1636065-3b81-4e5e-a7b0-16f6cef79849)
-## Verifacation:
-Test the firewall using Kali VM to verify rules and firewall configurations were working correctly. ![Screenshot 2024-09-18 203227](https://github.com/user-attachments/assets/32f7b894-4bb9-470e-9043-7c7fa8d3255a)
+
+## Install Wireshark
+Used the package manager to install Wireshark![Screenshot 2024-09-20 190604](https://github.com/user-attachments/assets/055ccc9e-00b7-4a03-8579-4de12141e3c6)
+
+##  Launch Wireshark 
+ Launched Wireshark by typing the command in the terminal. ![Screenshot 2024-09-20 190629](https://github.com/user-attachments/assets/b284eb3d-3fc4-481a-93d4-c350ba06d75b)
+ 
+## Capture Network Traffic
+Started scanning the network. ![Screenshot 2024-09-20 190705](https://github.com/user-attachments/assets/648c06a4-d373-43a0-b0ab-2548eada4491)
+
+##  Analyze Network Traffic
+Used display filters to focus on specific types of traffic. ![Screenshot 2024-09-20 190805](https://github.com/user-attachments/assets/d663ba24-3cf1-47a1-958f-648b060fa760)
+
+## Test for HTTP Credentials in Plain Text
+While capturing HTTP traffic, I visited a website that uses HTTP (not HTTPS) for login credentials.![Screenshot 2024-09-20 185031](https://github.com/user-attachments/assets/f11d97eb-d817-4100-8cb6-421693772691)
+In the stream, I inspect the HTTP request to see if the username and password were transmitted in plaintext. If HTTP is used, credentials may be visible directly in the payload wich was proven correctly through wireshark.![Screenshot 2024-09-20 185012](https://github.com/user-attachments/assets/7bf40b1d-b48b-4efc-8136-cc6d03d556bc)
+
+## Conclusion
+
+In this project, I successfully installed and used Snort as a network intrusion detection system. By applying and modifying Snort rules, I was able to detect and log suspicious activity, specifically a SYN flood attack simulated using Kali Linux. This demonstrated Snort’s ability to monitor, identify, and respond to network-based threats, which is essential for protecting network infrastructure from malicious attacks.
 
